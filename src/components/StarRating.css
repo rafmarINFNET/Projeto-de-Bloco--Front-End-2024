@@ -1,0 +1,11 @@
+/* src/components/StarRating.css */
+
+.star-rating {
+  display: flex;
+  gap: 5px; /* Espaçamento entre as estrelas */
+}
+
+.star {
+  font-size: 30px; /* Tamanho das estrelas */
+  transition: color 0.2s; /* Efeito de transição na mudança de cor */
+}

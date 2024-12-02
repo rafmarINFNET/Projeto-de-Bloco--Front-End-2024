@@ -1,0 +1,198 @@
+header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: transparent;
+  transition: all ease 0.5s;
+}
+
+header.black {
+  background-color: #141414;
+}
+
+.header--logo {
+  height: 120px; /* Define a altura da logo */
+  margin-left: 10px; /* Adiciona margem ao lado esquerdo */
+}
+
+.header--logo img {
+  height: 100%; /* Garante que a altura será respeitada */
+  width: auto; /* Ajusta a largura proporcionalmente */
+  object-fit: contain; /* Mantém a proporção da imagem */
+  cursor: pointer; /* Opcional: Mostra que a imagem é interativa */
+}
+.header--user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header--user-card {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: #e50914; /* Cor de fundo para o card */
+  transition: background-color 0.3s ease;
+}
+
+.header--user-card:hover {
+  background-color: #a0020a; /* Cor de fundo quando passar o mouse */
+}
+
+/* Estilos para o botão de logout */
+.logout-button {
+  background-color: #e50914; /* Cor de fundo vermelha */
+  color: white; /* Texto branco */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 8px 16px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho de fonte ajustado */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Mostra que o botão é clicável */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+  margin-left: 20px; /* Espaço à esquerda */
+}
+
+.logout-button:hover {
+  background-color: #a0020a;
+  transform: scale(1.05);
+}
+
+.logout-button:active {
+  transform: scale(0.98);
+}
+
+.header--search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  header {
+    padding: 0 15px; /* Menor padding */
+  }
+
+  .header--logo {
+    height: 30px; /* Logo menor */
+  }
+
+  .header--user {
+    margin-left: auto; /* Faz com que os itens fiquem alinhados à direita */
+  }
+
+  .header--user-card {
+    margin-left: 10px; /* Menos espaço entre o card do usuário e o botão de logout */
+    width: 35px; /* Reduz a largura */
+    height: 35px; /* Reduz a altura */
+    font-size: 18px; /* Reduz o tamanho da fonte */
+  }
+
+  .logout-button {
+    font-size: 14px; /* Fonte menor */
+    padding: 6px 12px; /* Menos padding */
+    margin-left: 10px; /* Menos espaço entre o logout e o card */
+  }
+}
+
+/* Para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+  header {
+    padding: 0 10px; /* Menor padding */
+  }
+
+  .header--logo {
+    height: 25px; /* Logo ainda menor */
+  }
+
+  .header--user-card {
+    width: 30px; /* Card ainda menor */
+    height: 30px; /* Card ainda menor */
+    font-size: 16px; /* Fonte bem menor */
+    margin-left: 10px; /* Espaçamento entre os itens */
+  }
+
+  .logout-button {
+    font-size: 14px; /* Fonte bem menor */
+    padding: 6px 5px; /* Menos padding */
+    margin-left: 20px; /* Menos espaço entre o card e o logout */
+    width: 50px;
+    height: auto;
+  }
+}
+
+.search-bar {
+  position: relative;
+  margin: 20px auto;
+  display: flex;
+  gap: 6px;
+}
+.search-bar-input {
+  width: 500px;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.search-bar input::placeholder {
+  color: #aaa;
+  font-style: italic;
+  width: 400px;
+}
+.search-bar input:focus {
+  border-color: #7e7e7e; /* Vermelho característico da Netflix */
+  background-color: #444;
+}
+.search-bar button {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  width: 45px;
+}
+.button-toggle-adult {
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.search-bar button:hover,
+.button-toggle-adult:hover {
+  background-color: #f40612; /* Vermelho mais claro ao passar o mouse */
+}
+
+.search-bar button:active {
+  transform: scale(0.95); /* Efeito de clique */
+}
+
+.header--user--adult {
+  display: flex;
+}

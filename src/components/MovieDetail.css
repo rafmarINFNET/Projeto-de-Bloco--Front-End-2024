@@ -1,0 +1,135 @@
+/* MovieDetail.css */
+
+.movie-detail-card {
+  background-color: #181818; /* Cor de fundo do card */
+  border-radius: 10px; /* Bordas arredondadas */
+  overflow: hidden; /* Oculta o conteúdo que excede os limites do card */
+  margin: 70px auto; /* Centraliza o card horizontalmente com margem em cima e embaixo */
+  width: 95%; /* Largura do card */
+  max-width: 900px; /* Largura máxima do card */
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 2px 1px,
+    rgba(255, 255, 255, 0.185) 0px 4px 2px,
+    rgba(255, 255, 255, 0.09) 0px 8px 4px,
+    rgba(255, 255, 255, 0.137) 0px 16px 8px,
+    rgba(255, 255, 255, 0.205) 0px 32px 16px;
+}
+
+.movie-detail-banner {
+  height: 500px; /* Altura do banner */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; /* Alinha o título para a parte inferior */
+  padding: 15px; /* Aumentando o espaçamento para o título */
+  color: white; /* Cor do texto */
+}
+
+.movie-detail-title {
+  font-size: 24px; /* Aumentando o tamanho da fonte do título */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Aumentando a sombra do texto */
+}
+
+.movie-detail-content {
+  padding: 25px; /* Aumentando o espaçamento interno do conteúdo */
+  color: #f0f0f0; /* Cor do texto do conteúdo */
+}
+
+.movie-detail-content p {
+  margin: 15px 0; /* Aumentando a margem para parágrafos */
+  line-height: 1.5; /* Melhorando a legibilidade com espaço entre linhas */
+}
+
+.back-button {
+  padding: 6px 12px; /* Ajustando o padding do botão */
+  background-color: #f3f3f3; /* Cor de fundo do botão */
+  color: rgb(0, 0, 0); /* Cor do texto do botão */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 16px; /* Tamanho da fonte do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  transition: background-color 0.3s ease; /* Efeito de transição na mudança de cor */
+  display: inline-flex; /* Flex para alinhar o ícone e o texto */
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+}
+
+.back-button:hover {
+  background-color: #000000; /* Cor de fundo do botão ao passar o mouse */
+  color: white;
+  transition: 0.6s ease;
+}
+
+.button-container {
+  display: flex; /* Flexbox para alinhar botões */
+  justify-content: center; /* Centralizando os botões */
+  margin-top: 30px; /* Aumentando o espaçamento acima dos botões */
+  gap: 10px; /* Diminuindo o espaço entre os botões */
+}
+
+.trailer-container {
+  margin-top: 20px; /* Espaçamento acima do trailer */
+  display: flex;
+  justify-content: center;
+}
+
+.trailer-container iframe {
+  border: none; /* Removendo a borda do iframe */
+  width: 100%; /* Largura responsiva */
+  max-width: 560px; /* Largura máxima do iframe */
+  height: 315px; /* Altura do iframe */
+}
+
+@media (max-width: 698px) {
+  .movie-detail-card {
+    margin-top: 80px;
+  }
+  .movie-detail-banner {
+    height: 300px; /* Altura do banner para telas menores */
+  }
+
+  .movie-detail-content {
+    padding: 35px; /* Menor padding em dispositivos pequenos */
+  }
+
+  .back-button {
+    padding: 10px; /* Ajustando padding do botão em telas pequenas */
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .movie-detail-card {
+    margin-top: 80px;
+  }
+  .movie-detail-banner {
+    height: 200px; /* Altura do banner em telas muito pequenas */
+  }
+
+  .movie-detail-title {
+    font-size: 20px; /* Reduzindo o tamanho da fonte do título */
+  }
+
+  .movie-detail-content {
+    padding: 20px; /* Reduzindo padding em dispositivos muito pequenos */
+  }
+
+  .back-button {
+    font-size: 14px; /* Reduzindo o tamanho da fonte do botão */
+    padding: 5px; /* Ajustando padding para dispositivos muito pequenos */
+    text-align: center;
+  }
+  .icon {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+  button {
+    width: 150px;
+    height: 60px;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: white;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  flex: 1;
+}
+
+.lists {
+  margin-top: -150px;
+}
+
+/* src/App.css ou onde você define o estilo do rodapé */
+
+footer {
+  background-color: red; /* Cor de fundo */
+  text-align: center; /* Centralizar o texto */
+  padding: 10px; /* Padding para o rodapé */
+  position: relative; /* Pode usar relative ou static */
+  bottom: 0; /* Fixa o rodapé no fundo se necessário */
+  width: 100%; /* Para ocupar toda a largura da tela */
+}
+
+/* .loading {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+} */

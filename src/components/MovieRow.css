@@ -1,0 +1,214 @@
+.movieRow {
+  margin-bottom: 30px;
+}
+
+.movieRow h2 {
+  margin: 0px 0px 0px 30px;
+}
+
+.movieRow--listarea {
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+
+.movieRow--list {
+  transition: all ease 0.5s;
+}
+
+.movieRow--list {
+  width: ;
+}
+
+.movieRow--item {
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+}
+
+.movieRow--item img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+
+.movieRow--item img:hover {
+  transform: scale(1);
+}
+
+.movieRow--left,
+.movieRow--right {
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.movieRow--left {
+  left: 0;
+}
+
+.movieRow--right {
+  right: 0;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right {
+  opacity: 1;
+}
+
+@media (max-width: 760px) {
+  .movieRow--left,
+  .movieRow--right {
+    opacity: 1;
+  }
+}
+/* .movieRow padrão para telas grandes */
+.movieRow {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.movieRow h2 {
+  margin: 0px 0px 0px 30px;
+}
+
+.movieRow--listarea {
+  overflow-x: hidden;
+  padding-left: 30px;
+  position: relative;
+}
+
+.movieRow--list {
+  transition: all ease 0.5s;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.movieRow--item {
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+}
+
+.movieRow--item img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+
+.movieRow--item img:hover {
+  transform: scale(1);
+}
+
+/* Setas de navegação */
+.movieRow--left,
+.movieRow--right {
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.movieRow--left {
+  left: 0;
+}
+
+.movieRow--right {
+  right: 0;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right {
+  opacity: 1;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+  .movieRow--item {
+    width: 130px; /* Reduz o tamanho da imagem nas telas médias */
+  }
+
+  .movieRow--left,
+  .movieRow--right {
+    opacity: 1;
+    width: 30px; /* Reduz a largura das setas de navegação */
+    height: 200px;
+  }
+
+  .movieRow--left svg,
+  .movieRow--right svg {
+    width: 20px; /* Reduz o tamanho dos ícones das setas */
+    height: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .movieRow {
+    margin-bottom: 20px;
+  }
+
+  .movieRow--item {
+    width: 120px; /* Menor tamanho de imagem para telas pequenas */
+  }
+
+  .movieRow--left,
+  .movieRow--right {
+    opacity: 1;
+    width: 25px; /* Reduz ainda mais as setas */
+    height: 180px;
+  }
+
+  .movieRow--left svg,
+  .movieRow--right svg {
+    width: 18px; /* Ajusta os ícones para telas menores */
+    height: 18px;
+  }
+
+  /* Ajusta a lista de filmes para uma rolagem horizontal mais acessível */
+  .movieRow--list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .movieRow--item {
+    width: 100px; /* Reduz ainda mais as imagens */
+  }
+
+  .movieRow--left,
+  .movieRow--right {
+    width: 20px; /* Deixa as setas bem pequenas */
+    height: 160px;
+  }
+
+  .movieRow--left svg,
+  .movieRow--right svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .movieRow h2 {
+    font-size: 18px; /* Reduz o tamanho do título */
+    margin-left: 15px;
+  }
+
+  /* Aumenta a área de rolagem para tornar a navegação mais fácil */
+  .movieRow--listarea {
+    padding-left: 15px;
+  }
+}

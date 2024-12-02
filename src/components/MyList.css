@@ -1,0 +1,158 @@
+/* Container geral */
+.my-list {
+  margin-top: 80px;
+  padding: 20px;
+  color: #e0e0e0;
+  flex: 1;
+}
+
+.my-list h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.linha {
+  border-bottom: 2px solid white;
+  margin: 25px 0;
+}
+
+.my-list__banners {
+  margin-bottom: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.my-list__banner {
+  flex: 1 1 calc(20% - 10px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  max-width: 350px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.my-list__image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.45s ease;
+}
+
+.my-list__image:hover {
+  opacity: 0.3;
+  transform: scale(1.09);
+}
+
+.my-list__info {
+  padding: 10px;
+  color: #ffffff;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ff1900;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.remove-icon:hover {
+  color: #ff1900;
+  transform: scale(1.3);
+  transition: 0.3s ease;
+}
+
+/* Trailer Overlay - Quando o mouse entra no banner */
+.my-list__banner:hover .trailer-overlay {
+  opacity: 1;
+  z-index: 10;
+}
+
+.trailer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.trailer-overlay iframe {
+  width: 80%;
+  height: 80%;
+  border-radius: 8px;
+}
+
+/* Modal Style para Trailer */
+.modal-trailer .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Overlay para o Modal */
+.MuiModal-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .my-list__banner {
+    flex: 1 1 calc(30% - 15px);
+    max-width: 550px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .my-list__banners {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-list__banner {
+    flex: 1 1 calc(100% - 15px);
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  .my-list__banners {
+    margin-bottom: 80px;
+  }
+}
